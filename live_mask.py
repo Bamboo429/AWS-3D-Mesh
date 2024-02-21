@@ -36,7 +36,7 @@ class MainWindow(QtWidgets.QMainWindow):
     
     def __init__(self):
         super(MainWindow, self).__init__()
-        uic.loadUi('/home/users/tracylin/Documents/3D-Head/UI/live_mask_ui.ui', self)
+        uic.loadUi('./UI/live_mask_ui.ui', self)
         self.show()
         
         self.disply_width = 640
@@ -210,7 +210,7 @@ class VideoThread(QThread):
     def run(self):
         # capture from web cam
         #self.cap = cv2.VideoCapture(0)
-        self.cap = cv2.VideoCapture('/home/users/tracylin/Documents/AWS-3D-Mesh/experiments/ivy_video.mov')
+        self.cap = cv2.VideoCapture('./experiments/ivy_video.mov')
         #self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
         #self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
         
