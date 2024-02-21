@@ -6,7 +6,7 @@ Created on Thu May 25 11:08:49 2023
 @author: chuhsuanlin
 """
 
-from predictor import FaceMeshPredictor
+#from predictor import FaceMeshPredictor
 from utils import get_relative_path
 import numpy as np
 import cv2
@@ -44,12 +44,12 @@ class DAD_3DHeads():
         self.head_mesh = HeadMesh()
         self.get_3d_head()
         #self.save_3d_mesh('output/capture_3d.obj')
-        self. predictor = FaceMeshPredictor.dad_3dnet()
+        #self. predictor = FaceMeshPredictor.dad_3dnet()
     def get_3d_head(self):
 
         
-        #addr = 'http://3.149.235.233:5000'
-        addr = 'http://127.0.0.1:5000'
+        addr = 'http://3.145.64.155:5000'
+        #addr = 'http://127.31.10.85:5000'
         test_url = addr + '/predict'
         
         # prepare headers for http request
