@@ -23,7 +23,7 @@ class Brain_System(DAD_3DHeads):
         super().__init__(image)
         
     def read_model(self):
-        model_folder = '/home/users/tracylin/Documents/3D-Head/brain_model'
+        model_folder = './brain_model'
         
         lpa_mat = scipy.io.loadmat(f'{model_folder}/x_lpa_first_fold_of_5.mat')
         self.x_lpa = lpa_mat['x_lpa']
