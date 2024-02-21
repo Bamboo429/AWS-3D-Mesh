@@ -9,7 +9,7 @@ Created on Wed Jun 21 17:22:52 2023
 import numpy as np
 import trimesh
 import matplotlib.pyplot as plt
-import networkx as nx
+#import networkx as nx
 from dad_utils import affinemap, transform, polylinelen, polylineinterp, angle_between_vectors
 from DAD_3DHeads import DAD_3DHeads
 

@@ -22,7 +22,7 @@ import time
 from Brain_system import Brain_System
 from Brain_1020 import Brain_1020
 import trimesh
-from demo_utils import MeshSaver
+#from demo_utils import MeshSaver
 
 import mediapipe as mp
 mp_drawing = mp.solutions.drawing_utils # Drawing helpers
@@ -209,8 +209,8 @@ class VideoThread(QThread):
         
     def run(self):
         # capture from web cam
-        #self.cap = cv2.VideoCapture(0)
-        self.cap = cv2.VideoCapture('./experiments/ivy_video.mov')
+        self.cap = cv2.VideoCapture(0)
+        #self.cap = cv2.VideoCapture('./experiments/ivy_video.mov')
         #self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
         #self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
         
@@ -344,7 +344,7 @@ class HeadThread(QThread):
     
     def run(self):
         # capture from web cam
-        self.cap = cv2.VideoCapture('/home/users/tracylin/Documents/AWS-3D-Mesh/experiments/ivy_video.mov')
+        self.cap = cv2.VideoCapture(0)
         #self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
         #self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
         #test = np.asarray([0,0,0,0])
@@ -423,8 +423,8 @@ class SaveThread(QThread):
     
         #output_path = 
         mesh = self.bs.affined_head, self.bs.faces
-        mesh_save = MeshSaver()
-        mesh_save(mesh, self.output_path)
+        #mesh_save = MeshSaver()
+        #mesh_save(mesh, self.output_path)
         
         QThread.currentThread().quit()
         #print('saved')

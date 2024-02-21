@@ -11,15 +11,15 @@ from utils import get_relative_path
 import numpy as np
 import cv2
 import os
-import torch
-from demo_utils import MeshSaver
+#import torch
+#from demo_utils import MeshSaver
 from dad_utils import affinemap, transform, landmark2numpy
-from model_training.head_mesh import HeadMesh
+#from model_training.head_mesh import HeadMesh
 
 import trimesh
 import requests
 # for test
-from pytorch_toolbelt.utils import read_rgb_image
+#from pytorch_toolbelt.utils import read_rgb_image
 import matplotlib.pyplot as plt
 
 # region visualization
@@ -41,7 +41,7 @@ class DAD_3DHeads():
         self.edges = np.load(get_relative_path(os.path.join(FLAME_IDICES_DIR, f"head_edges.npy"), __file__))
         self.face_edges = np.load(get_relative_path(os.path.join(FLAME_IDICES_DIR, f"face_edges.npy"), __file__))
 
-        self.head_mesh = HeadMesh()
+        #self.head_mesh = HeadMesh()
         self.get_3d_head()
         #self.save_3d_mesh('output/capture_3d.obj')
         #self. predictor = FaceMeshPredictor.dad_3dnet()

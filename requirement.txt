@@ -1,0 +1,10 @@
+
+
+PyQt5
+opencv-python
+matplotliby
+scipy
+mediapipe
+trimesh
+rtree
+
