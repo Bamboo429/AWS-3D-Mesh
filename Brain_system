@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed May 31 14:50:04 2023
+
+@author: tracylin
+"""
+import scipy.io
+
+
+
+
+class Brain_System():
+    def __init__(self):
+        
+        self.read_model()
+        
+    def read_model(self):
+        model_folder = 'brain_model'
+        lpa_mat = scipy.io.loadmat(f'{model_folder}/x_lpa_first_fold_of_5.mat')
+        x_lpa = lpa_mat['x_lpa']
+        rpa_mat = scipy.io.loadmat(f'{model_folder}/x_rpa_first_fold_of_5.mat')
+        x_rpa = rpa_mat['x_rpa']
+
+        iz_mat = scipy.io.loadmat(f'{model_folder}l/x_iz_first_fold_of_5.mat')
+        x_iz = iz_mat['x_iz']
+        cz_mat = scipy.io.loadmat(f'{model_folder}/x_cz_first_fold_of_5.mat')
+        x_cz = cz_mat['x_cz']
+        
+        
+        
+
+bb = Brain_system()
+
+        
+        
+        
+        
