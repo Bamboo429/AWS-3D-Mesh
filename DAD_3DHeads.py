@@ -48,7 +48,7 @@ class DAD_3DHeads():
     def get_3d_head(self):
 
         
-        addr = 'http://3.145.64.155:5000'
+        addr = 'http://3.133.114.85:5000'
         #addr = 'http://127.31.10.85:5000'
         test_url = addr + '/predict'
         

@@ -78,7 +78,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.img_label.setPixmap(qt_img)
     
         if self.capture:
-            cv2.imshow('head', cv_img)
+            #cv2.imshow('head', cv_img)
             self.capture = False
             self.head_image = cv2.cvtColor(cv_img, cv2.COLOR_BGR2RGB)
 
@@ -102,7 +102,7 @@ class MainWindow(QtWidgets.QMainWindow):
             self.btn_recapture.setEnabled(True)
             self.btn_save.setEnabled(True)
             
-            cv2.destroyWindow("head")     
+            #cv2.destroyWindow("head")     
             
             msgBox = QMessageBox()
             msgBox.setText("Generating 3D head model")
@@ -113,7 +113,7 @@ class MainWindow(QtWidgets.QMainWindow):
             #print("Success!")
         else:
             self.btn_capture.setEnabled(True)
-            cv2.destroyWindow("head")  
+            #cv2.destroyWindow("head")  
             #print("Cancel!")
             
     @pyqtSlot(Brain_System)  
